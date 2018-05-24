@@ -55,12 +55,43 @@ else :
 
 print('!!!continue!!!')
 
-# 구구단
+# 과제
 
+print('1. 구구단')
+# 구구단
 for i in range(1, 10) :
     for j in range(1, 10) :
-        print(format(j, "d") + ' X ' + format(i, "d") + ' = ' + format((i*j), "d"), end='\t')
+        print('{0} X {1} = {2}'.format(j, i, i*j), end='\t')
+        # print(format(j, "d") + ' X ' + format(i, "d") + ' = ' + format((i*j), "d"), end='\t')
     else :
         print('')
 else :
     pass
+
+print('2. 삼각형')
+# 삼각형
+for i in range(0, 10) :
+    for j in range(0, i+1) :
+        print('*', end='')
+    else :
+        print('')
+
+print('3. 역삼각형')
+# 역삼각형
+for i in range(10, 0, -1) :
+    for j in range(0, i) :
+        print('*', end='')
+    else :
+        print('')
+
+
+print('4. 삼각형 별해')
+# 삼각형 별해
+# 중첩 for 문 사용하지 않고 작성
+for i in range(0, 10) :
+    print('*' * (i+1))
+
+print('5. 역삼각형 별해')
+# 역삼각형 별해
+for i in range(10, 0, -1) :
+    print('*' * i)
